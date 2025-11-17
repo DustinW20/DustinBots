@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+  <!-- 0. SAPAAN AWAL -->
+  <category>
+    <pattern>HELLO</pattern>
+    <template>
+      Halo, saya chatbot yang membahas penelitian machine learning untuk prediksi kualitas udara di Bogor Selatan.
+      Saya menggunakan contoh jurnal tentang XGBoost, AdaBoost, dan RNN untuk memprediksi PM10 dan PM2.5.
+      Kamu bisa tanya apa saja tentang penelitian dan machine learning.
+    </template>
+  </category>
+
+  <category>
+    <pattern>HI</pattern>
+    <template>
+      Halo, saya chatbot yang membahas penelitian machine learning untuk prediksi kualitas udara di Bogor Selatan.
+      Tanyakan saja tentang PM10, PM2.5, XGBoost, AdaBoost, atau RNN.
+    </template>
+  </category>
+
+  <category>
+    <pattern>HALO</pattern>
+    <template>
+      Halo, selamat datang.
+      Saya siap menjelaskan penelitian prediksi kualitas udara dengan machine learning.
+    </template>
+  </category>
+
+  <!-- 1. TOPIK PENELITIAN -->
+  <category>
+    <pattern>APA TOPIK PENELITIAN INI</pattern>
+    <template>
+      Topik penelitian ini adalah prediksi konsentrasi PM10 dan PM2.5 di Bogor Selatan menggunakan tiga algoritma machine learning,
+      yaitu XGBoost, AdaBoost, dan Recurrent Neural Network atau RNN.
+      Tujuannya supaya kualitas udara bisa diprediksi lebih akurat dan membantu pemantauan polusi udara.
+    </template>
+  </category>
+
+  <!-- 2. APA ITU PM10 DAN PM25 -->
+  <category>
+    <pattern>APA ITU PM10 DAN PM25</pattern>
+    <template>
+      PM10 dan PM2.5 adalah partikel debu halus di udara.
+      PM10 adalah partikel dengan ukuran sampai 10 mikrometer, sedangkan PM2.5 sampai 2,5 mikrometer.
+      Keduanya berbahaya bagi kesehatan karena bisa masuk ke saluran pernapasan dan paru paru.
+      Penelitian ini memprediksi nilai PM10 dan PM2.5 untuk menilai kualitas udara.
+    </template>
+  </category>
+
+  <!-- 3. ALGORITMA YANG DIGUNAKAN -->
+  <category>
+    <pattern>ALGORITMA APA SAJA YANG DIGUNAKAN</pattern>
+    <template>
+      Penelitian menggunakan tiga algoritma:
+      pertama XGBoost sebagai model ensemble berbasis gradient boosting,
+      kedua AdaBoost sebagai algoritma boosting klasik,
+      dan ketiga Recurrent Neural Network atau RNN untuk menangkap pola deret waktu pada data kualitas udara.
+    </template>
+  </category>
+
+  <!-- 4. KENAPA ADABOOST TERBAIK -->
+  <category>
+    <pattern>MENGAPA ADABOOST MENJADI MODEL TERBAIK</pattern>
+    <template>
+      AdaBoost menjadi model terbaik karena menghasilkan nilai error yang paling kecil.
+      Pada penelitian ini, AdaBoost memiliki nilai MAE dan RMSE paling rendah,
+      serta nilai MAPE di bawah 20 persen, yang berarti prediksinya cukup akurat dan stabil
+      dibandingkan XGBoost dan RNN pada dataset yang jumlahnya tidak terlalu besar.
+    </template>
+  </category>
+
+  <!-- 5. METRIK EVALUASI -->
+  <category>
+    <pattern>METRIK APA YANG DIGUNAKAN UNTUK EVALUASI</pattern>
+    <template>
+      Penelitian ini menggunakan tiga metrik regresi,
+      yaitu Mean Absolute Error atau MAE, Root Mean Square Error atau RMSE,
+      dan Mean Absolute Percentage Error atau MAPE.
+      Tiga metrik ini dipakai untuk mengukur seberapa besar selisih antara hasil prediksi dan nilai aktual.
+    </template>
+  </category>
+
+  <!-- 6. APA ITU MAE RMSE MAPE -->
+  <category>
+    <pattern>JELASKAN MAE RMSE MAPE</pattern>
+    <template>
+      MAE adalah rata rata selisih absolut antara nilai prediksi dan nilai aktual.
+      RMSE adalah akar dari rata rata kuadrat selisih antara prediksi dan nilai aktual,
+      sehingga lebih sensitif terhadap kesalahan yang besar.
+      MAPE adalah rata rata kesalahan absolut dalam bentuk persentase terhadap nilai aktual.
+      Jika MAPE di bawah 20 persen, model biasanya dianggap cukup akurat.
+    </template>
+  </category>
+
+  <!-- 7. APA ITU XGBOOST -->
+  <category>
+    <pattern>APA ITU XGBOOST</pattern>
+    <template>
+      XGBoost adalah algoritma ensemble learning berbasis gradient boosting.
+      Model ini membangun banyak tree secara bertahap, di mana setiap tree baru mencoba memperbaiki kesalahan
+      dari tree sebelumnya.
+      XGBoost memiliki fungsi loss dan regularisasi sehingga lebih stabil dan mampu mencegah overfitting,
+      cocok untuk data tabular seperti data polusi udara dan faktor meteorologi.
+    </template>
+  </category>
+
+  <!-- 8. APA ITU ADABOOST -->
+  <category>
+    <pattern>APA ITU ADABOOST</pattern>
+    <template>
+      AdaBoost adalah algoritma boosting yang menggabungkan banyak weak learner menjadi satu strong learner.
+      Pada setiap iterasi, model akan menaikkan bobot pada data yang salah diprediksi,
+      sehingga model berikutnya lebih fokus pada data yang sulit.
+      Di akhir proses, prediksi akhir diambil dari gabungan semua weak learner dengan bobot yang berbeda.
+    </template>
+  </category>
+
+  <!-- 9. APA ITU RNN -->
+  <category>
+    <pattern>APA ITU RNN</pattern>
+    <template>
+      RNN atau Recurrent Neural Network adalah jenis jaringan saraf yang dirancang untuk data sekuensial
+      atau deret waktu.
+      RNN memiliki hidden state yang menyimpan informasi dari langkah sebelumnya,
+      sehingga cocok untuk memodelkan data yang bergantung pada waktu, seperti data kualitas udara harian.
+      Pada penelitian ini, RNN dipakai sebagai pembanding terhadap XGBoost dan AdaBoost.
+    </template>
+  </category>
+
+  <!-- 10. UKURAN DATASET PENELITIAN -->
+  <category>
+    <pattern>BERAPA BANYAK DATA YANG DIGUNAKAN</pattern>
+    <template>
+      Dataset yang digunakan berjumlah 912 pengamatan.
+      Setiap pengamatan memuat nilai PM10, PM2.5, suhu udara, dan kelembapan.
+      Data ini sudah melalui tahap preprocessing seperti interpolasi nilai hilang, penanganan outlier,
+      dan penyeragaman format waktu.
+    </template>
+  </category>
+
+  <!-- 11. KESIMPULAN PENELITIAN -->
+  <category>
+    <pattern>APA KESIMPULAN UTAMA PENELITIAN</pattern>
+    <template>
+      Kesimpulan utama penelitian ini adalah bahwa AdaBoost memberikan performa terbaik
+      dalam memprediksi PM10 dan PM2.5 dengan tingkat kesalahan yang paling rendah.
+      XGBoost tetap stabil, tetapi sedikit kalah akurat, sedangkan RNN kurang optimal untuk dataset yang kecil.
+      Hasil ini menunjukkan bahwa metode ensemble boosting sangat cocok untuk prediksi kualitas udara
+      pada data berukuran sedang.
+    </template>
+  </category>
+
+</aiml>
+
+
+ 
